@@ -56,7 +56,13 @@ while (have_posts()) : the_post();
 				
                         $time = strtotime(get_post_meta(get_the_ID(), "crl_date", TRUE));
                         
-                        echo '<tr><td style="width: 250px;">';
+                        echo '<tr style="';
+                            if ($time < time() && date('Y-m-d', $time) != date('Y-m-d')) {
+                                echo 'text-decoration:line-through;';
+                            } elseif (date('Y-m-d', $time) == date('Y-m-d')) {
+                                echo 'font-weight:bold;';
+                            }
+                        echo '"><td style="width: 250px;">';
                         if ($time != $lastTime) {
                             echo date('d', $time);
                             echo ' ';

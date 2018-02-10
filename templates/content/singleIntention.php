@@ -30,7 +30,8 @@
                     <td style="border: none; width:50px; padding: 0;"><?php echo ($i === 0) ? get_post_meta
                         (get_the_ID(), "im_hour", TRUE) : ''; ?></td>
 	                <?php if (count($intencja) > 1) { ?>
-                    <td style="border: none;width: 20px;padding: 0;text-align: center;"><?php echo $month[ $i+1 ];
+                    <td style="vertical-align:top; border: none;width: 20px;padding: 0;text-align: center;"><?php echo
+                        $month[ $i+1 ];
                     ?></td>
 	                <?php } ?>
                     <td style="border: none;padding: 0;">- <?php echo $intencja[ $i ]; ?></td>

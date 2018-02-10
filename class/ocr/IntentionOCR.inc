@@ -94,8 +94,7 @@ class IntentionOCR implements IOCR {
 		} elseif ($this->multi_intencja || preg_match('/^[IVX]{1,4}\./', $lineString)) {
 			$this->intencje[] = trim(preg_replace('/^[IVX]{1,3}\./', '', $lineString));
 		} elseif (preg_match('/^(Chrzest|Roczki|Po Mszy św.|Po Mszy|Chrzty:|Roczek:)/', $lineString)) {
-			$il                    = count($this->intencje) - 1;
-			$this->intencje[ $il ] .= '</br>'.$lineString;
+			$this->intencje[ count($this->intencje) -1 ] .= '</br>'.$lineString;
 		} elseif(empty($lineString)) {
 			//nic do zrobienia
 		} else {

@@ -4,7 +4,7 @@
 Plugin Name: eParish
 Plugin URI:https://github.com/pkuznik/IntencjeMszalne2
 Description: Strona twojej wirtualnej parafii
-Version: 1.3
+Version: 1.4
 Author: Piotr Kuźnik <piotr.damian.kuznik@gmail.com>
 Author URI: https://github.com/pkuznik/
 Text Domain: intencje mszalne, ogłoszenia, plan kolęd

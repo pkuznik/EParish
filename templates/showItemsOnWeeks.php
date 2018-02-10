@@ -85,7 +85,7 @@ while (have_posts()) : the_post();
                         <tbody style="border: none;">
 						<?php for ($i = 0; $i < count($intencja); $i++) { ?>
                             <tr style="border: none; padding: 0;">
-                                <td style="vertical-align: top;border: none; width:50px; padding: 0;"><?php echo ($i === 0) ? get_post_meta(get_the_ID(), "im_hour", TRUE) : ''; ?></td>
+                                <td style="vertical-align: top;border: none; width:50px; padding: 0;"><?php echo ($i === 0) ? str_replace('23:59', '24:00', get_post_meta(get_the_ID(), "im_hour", TRUE)) : ''; ?></td>
 								<?php if (count($intencja) > 1) { ?>
                                     <td style="vertical-align: top;border: none;width: 20px;padding: 0;text-align: center;"><?php echo $month[ $i + 1 ];
 										?></td>

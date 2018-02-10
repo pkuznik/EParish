@@ -34,7 +34,7 @@ while (have_posts()) : the_post();
 
                 </header><!-- .entry-header -->
             </div>
-            <div class="wrap">
+            <div class="wrap" style="padding-bottom: 0;">
 
                 <header class="entry-header" style="width: 100%; display: block;margin-bottom: 20px;">
                 
@@ -64,16 +64,11 @@ while (have_posts()) : the_post();
                     </table>
                 </header>
             </div>
-            <div class="entry-content">
-				<?php
-				wp_link_pages([
-					'before'      => '<div class="page-links">'.__('Pages:', 'twentyseventeen'),
-					'after'       => '</div>',
-					'link_before' => '<span class="page-number">',
-					'link_after'  => '</span>',
-				]);
-				?>
-            </div><!-- .entry-content -->
+            <div class="wrap" style="padding-bottom: 0px;padding-top: 10px">
+                <header class="entry-header" style="width: 100%; display: block;padding: 0;">
+                    <div style="float: left;"><?php previous_post_link('&laquo; %link', 'Poprzednie'); ?> </div>
+                </header>
+            </div>
 			<?php
 			$wp_query = NULL;
 			$wp_query = $original_query;
