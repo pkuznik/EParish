@@ -103,7 +103,7 @@ class AdvertisementBean {
 	 * @param string $dscrpt
 	 */
 	public function addToLastElementToNewLine($dscrpt) {
-		$this->data[$this->maxElements ] .= PHP_EOL.$dscrpt;
+		$this->data[$this->maxElements ] .= '</br>'.$dscrpt;
 	}
 	
 	/**
