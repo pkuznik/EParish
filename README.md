@@ -1,4 +1,4 @@
-# EParish
+# eParish
 eParish - Pomocnik przy tworzeniu twojej parafii w wordpresie
 
 
