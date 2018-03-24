@@ -4,7 +4,7 @@
  *
  *
  * Created by PhpStorm.
- * @package          Wordpress
+ * @package          eParish
  * @createDate       2017-11-11
  * @version          0.0.1
  * @author           Piotr Kuźnik <piotr.damian.kuznik@gmail.com>

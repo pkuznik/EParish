@@ -3,7 +3,7 @@
  * Plugin Name: eParish
  * Plugin URI: https://github.com/pkuznik/EParish/
  * Description: Strona twojej wirtualnej parafii
- * Version: 1.5
+ * Version: 1.6
  * Author: Piotr Kuźnik <piotr.damian.kuznik@gmail.com>
  * Author URI: https://github.com/pkuznik/
  * Text Domain: intencje mszalne, ogłoszenia, plan kolęd
