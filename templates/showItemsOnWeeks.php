@@ -95,9 +95,13 @@ while (have_posts()) : the_post();
                                 <?php if (is_user_logged_in()) { ?>
                                 <td  style="border: none;width: 100px;padding: 0;text-align: center;"><?php
 									if ($i === 0) {
+									    echo '<span style="width: 50px;float:left;">';
 										twentyseventeen_edit_link(get_the_ID());
+										echo '</span>';
 										echo " ";
-										echo '<a class="post-edit-link" href="'.get_delete_post_link( get_the_ID(), '', true).'">Usuń</a>';
+                                        echo '<span style="width: 50px;float:left;">';
+                                        echo '<span class="edit-link"><a class="post-edit-link" href="'.get_delete_post_link( get_the_ID(), '', true).'">Usuń</a></span>';
+                                        echo '</span>';
 									} ?>
                                 </td>
 								<?php } ?>
