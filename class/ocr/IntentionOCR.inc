@@ -65,7 +65,7 @@ class IntentionOCR implements IOCR {
      * @throws Exception
      */
 	private function ocrSimpleLine($lineString) {
-		if (preg_match('/^[a-zA-ZąĄćĆęĘłŁśŚńŃóÓżŻźŹ]* [0-9]{2}\.[IVX0-9]{1,4}\.[0-9]{4}r\./', $lineString, $matches)) {
+		if (preg_match('/^[a-zA-ZąĄćĆęĘłŁśŚńŃóÓżŻźŹ\s]* [0-9]{2}\.[IVX0-9]{1,4}\.[0-9]{4}r\./', $lineString, $matches)) {
 			$this->date   = str_replace(['r.', '.'], ['', '-'], explode(' ', $matches[0])[1]);
 			$this->patron = trim(str_replace($matches[0], '', $lineString));
 		} elseif (preg_match('/^[0-9]{1,2}:[0-9]{2}\s*-/', $lineString, $matches)) {
@@ -95,7 +95,7 @@ class IntentionOCR implements IOCR {
 			$this->intencje[] = trim(preg_replace('/^[IVX]{1,3}\./', '', $lineString));
 		} elseif (preg_match('/^(Chrzest|Roczki|Po Mszy św.|Po Mszy|Chrzty:|Roczek:)/', $lineString)) {
 			$this->intencje[ count($this->intencje) -1 ] .= '</br>'.$lineString;
-		} elseif(empty($lineString)) {
+		} elseif(empty($lineString) || preg_match('/^intencje mszalne/', strtolower($lineString))) {
 			//nic do zrobienia
 		} else {
 			echo "\nNie znaleziono schematu dla następującej lini:";

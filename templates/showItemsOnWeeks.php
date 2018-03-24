@@ -96,6 +96,8 @@ while (have_posts()) : the_post();
                                 <td  style="border: none;width: 100px;padding: 0;text-align: center;"><?php
 									if ($i === 0) {
 										twentyseventeen_edit_link(get_the_ID());
+										echo " ";
+										echo '<a class="post-edit-link" href="'.get_delete_post_link( get_the_ID(), '', true).'">Usuń</a>';
 									} ?>
                                 </td>
 								<?php } ?>
