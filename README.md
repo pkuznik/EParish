@@ -5,7 +5,7 @@ eParish - Pomocnik przy tworzeniu twojej parafii w wordpresie
 * Contributors: [Piotr Kuźnik](https://github.com/pkuznik)
 * Tags: plugin, wordpress, eparish, 
 * Requires at least: 4.5.2
-* Requires PHP: 5.3
+* Requires PHP: 5.6
 * Tested up to: 4.9.4
 * Stable tag: master
 * License: GPLv2 or later
