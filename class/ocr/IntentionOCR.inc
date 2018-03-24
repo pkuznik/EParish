@@ -65,10 +65,10 @@ class IntentionOCR implements IOCR {
      * @throws Exception
      */
 	private function ocrSimpleLine($lineString) {
-		if (preg_match('/^[a-zA-ZłŁśŚąĄ]* [0-9]{2}\.[IVX0-9]{1,4}\.[0-9]{4}r\./', $lineString, $matches)) {
+		if (preg_match('/^[a-zA-ZąĄćĆęĘłŁśŚńŃóÓżŻźŹ]* [0-9]{2}\.[IVX0-9]{1,4}\.[0-9]{4}r\./', $lineString, $matches)) {
 			$this->date   = str_replace(['r.', '.'], ['', '-'], explode(' ', $matches[0])[1]);
 			$this->patron = trim(str_replace($matches[0], '', $lineString));
-		} elseif (preg_match('/^[0-9]{1,2}:[0-9]{2}-/', $lineString, $matches)) {
+		} elseif (preg_match('/^[0-9]{1,2}:[0-9]{2}\s*-/', $lineString, $matches)) {
 			if ($this->bean) {
 				for ($i = 0; $i < count($this->intencje); $i++) {
 					$this->bean->set('intencja_'.($i + 1), $this->intencje[ $i ]);
